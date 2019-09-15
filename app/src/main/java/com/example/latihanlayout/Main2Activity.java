@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity{
 
     private Button btnAbout;
 
@@ -30,4 +30,5 @@ public class Main2Activity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
 }

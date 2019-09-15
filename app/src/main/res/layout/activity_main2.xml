@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".Main2Activity">
 
     <Button
         android:id="@+id/btnAbout"
@@ -24,5 +24,6 @@
         tools:layout_editor_absoluteX="51dp"
         tools:layout_editor_absoluteY="84dp"
         tools:srcCompat="@tools:sample/avatars[2]" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
