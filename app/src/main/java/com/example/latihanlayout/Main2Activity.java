@@ -1,5 +1,8 @@
 package com.example.latihanlayout;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -12,12 +15,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 public class Main2Activity extends AppCompatActivity{
 
     private Button btnAbout;
     private TextView txtUser;
     private WifiManager wifiManager;
+    private Button mNotifBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +53,34 @@ public class Main2Activity extends AppCompatActivity{
              */
             txtUser.setText(getIntent().getStringExtra("dataEmail"));
         }
+
+        mNotifBtn = (Button) findViewById(R.id.notif_btn);
+
+        final String message = "Ini adalah isi notifikasi";
+        final String title = "Ini adalah judul notifikasi";
+
+        mNotifBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                notifTemplate(title,message);
+            }
+        });
+    }
+
+    private void notifTemplate(String title, String message){
+        final Intent intent = new Intent(Main2Activity.this, Tab1.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(Main2Activity.this,0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder mBuilder =
+                (NotificationCompat.Builder) new NotificationCompat.Builder(Main2Activity.this)
+                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setContentTitle(title).setContentText(message)
+                        .setContentIntent(pendingIntent)
+                        .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_SOUND | Notification.FLAG_AUTO_CANCEL);
+        NotificationManager notificationManager =
+                (NotificationManager) Main2Activity.this.getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(1,mBuilder.build());
     }
 
     @Override
