@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Main2Activity">
 
+    <TextView
+        android:id="@+id/txtUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="272dp"
+        android:text="Data 1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAbout" />
+
     <Button
         android:id="@+id/btnAbout"
         android:layout_width="140dp"
@@ -17,13 +30,9 @@
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="308dp"
-        android:layout_height="300dp"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="84dp"
-        tools:srcCompat="@tools:sample/avatars[2]" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

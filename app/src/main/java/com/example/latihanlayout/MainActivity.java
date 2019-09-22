@@ -1,13 +1,13 @@
 package com.example.latihanlayout;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button loginBtn;
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         emailTxt = findViewById(R.id.emailTxt);
         passTxt = findViewById(R.id.passTxt);
@@ -43,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openArctivityHome(){
+        Bundle bundle = new Bundle();
+        bundle.putString("dataEmail", emailTxt.getText().toString());
         Intent intent = new Intent(this, Main2Activity.class);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 }
