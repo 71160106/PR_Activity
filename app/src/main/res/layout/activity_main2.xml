@@ -23,11 +23,11 @@
         android:id="@+id/btnAbout"
         android:layout_width="140dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="156dp"
         android:text="ABOUT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -40,11 +40,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" /><![CDATA[
-
-    />
-
-    ]]>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:layout_width="wrap_content"
@@ -66,7 +62,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.759"
-        app:layout_constraintStart_toStartOf="parent" />/>
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/film_list"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="156dp"
+        android:text="LIST MOVIE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

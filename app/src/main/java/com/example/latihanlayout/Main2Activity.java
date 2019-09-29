@@ -30,6 +30,7 @@ public class Main2Activity extends AppCompatActivity{
     private TextView txtUser;
     private WifiManager wifiManager;
     private Button mNotifBtn;
+    private Button btnfilm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,13 @@ public class Main2Activity extends AppCompatActivity{
             }
         });
 
+        btnfilm = (Button) findViewById(R.id.film_list);
+        btnfilm.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openActivityFilm();
+            }
+        });
         wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
         if(getIntent().getExtras()!=null){
@@ -147,6 +155,11 @@ public class Main2Activity extends AppCompatActivity{
         Intent intent = new Intent(this, aboutActivity.class);
         startActivity(intent);
 
+    }
+
+    public void openActivityFilm(){
+        Intent intent = new Intent(this, film.class);
+        startActivity(intent);
     }
 
 }
