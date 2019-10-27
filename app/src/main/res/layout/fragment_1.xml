@@ -9,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Ini Adalah Tab 1"
-        android:textSize="20dp" />
-
+        android:text="Benyamin Doni Andika Perkasa Taolin \n71160106"
+        android:textSize="30dp" />
 
 </LinearLayout>
